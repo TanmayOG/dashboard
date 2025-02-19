@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 
@@ -20,11 +21,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <div className="flex">
-          <Sidebar />
-          <main className="flex-1">{children}</main>
-        </div>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="flex">
+            <Sidebar />
+            <main className="flex-1">{children}</main>
+          </div>
+        </Suspense>
       </body>
     </html>
   );
