@@ -7,7 +7,7 @@ const ProfileSection = ({ imageUrl, name }) => {
         className="w-16 h-16 rounded-full object-cover"
       />
       <p className="text-xs text-gray-600 mt-1">Welcome back!</p>
-      <h1 className="text-xl font-medium">{name}</h1>
+      <h1 className="lg:text-xl md:text-sm sm:text-base font-medium">{name}</h1>
     </div>
   );
 };

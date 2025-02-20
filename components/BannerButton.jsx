@@ -1,6 +1,6 @@
 const BannerButton = ({ children }) => {
   return (
-    <button className="flex items-center gap-2 text-lg text-white">
+    <button className="flex items-center gap-2 text-xs md:text-sm lg:text-lg text-white">
       {children}
       <svg
         width="24"
